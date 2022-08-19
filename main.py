@@ -1,3 +1,4 @@
+from tkinter import CENTER
 from PySimpleGUI import PySimpleGUI as sg
 from pytube import YouTube
 from pytube import Playlist
@@ -55,41 +56,41 @@ def download_playlist(dict):
 def janela_inicio():
     sg.theme('Reddit')
     layout = [
-        [sg.Button('Vídeo', size=(30, 3), button_color=('#555555', '#e7e7e7'))],
-        [sg.Button('Música', size=(30, 3), button_color=('#555555', '#e7e7e7'))],
-        [sg.Button('Playlist', size=(30, 3), button_color=('#555555', '#e7e7e7'))]
+        [sg.Button('Vídeo', size=(30, 3), button_color=('#000000', '#48D1CC'))],
+        [sg.Button('Música', size=(30, 3), button_color=('#000000', '#48D1CC'))],
+        [sg.Button('Playlist', size=(30, 3), button_color=('#000000', '#48D1CC'))]
     ]
-    return sg.Window('Download Youtube', layout=layout, font=("CooperBlack", 13), finalize=True, size=(280, 250))
+    return sg.Window('Download Youtube', layout=layout, font=("Bodoni ", 13), finalize=True, size=(280, 250), element_justification=CENTER)
 
 
 def janela_video():
     sg.theme('Reddit')
     layout = [
     [sg.Text('Digite o Link do Vídeo:', size=(24,0)), sg.Input(key = 'video', size=(45,0))], 
-    [sg.Text('Selecione a pasta:', size=(24,0)), sg.InputText('', size= (35, 0),key = 'path'), sg.FolderBrowse('Arquivo', button_color=('#555555','#e7e7e7'),font=("CooperBlack", 12),size = (7,0)),],
-    [sg.Text( size=(24,1)),sg.Button('Baixar',font=("CooperBlack", 12), size=(20,1),button_color=('#555555','#e7e7e7'))]
+    [sg.Text('Selecione a pasta:', size=(24,0)), sg.InputText('', size= (35, 0),key = 'path'), sg.FolderBrowse('Arquivo', button_color=('#000000','#48D1CC'),font=("Bodoni ", 12),size = (7,0)),],
+    [sg.Text( size=(24,1)),sg.Button('Baixar',font=("Bodoni", 12), size=(20,1),button_color=('#000000','#48D1CC'))]
     ]
-    return sg.Window('Dowloader Vídeo',layout=layout,font=("Courier New", 10), finalize=True)
+    return sg.Window('Dowloader Vídeo',layout=layout,font=("Bodoni", 10), finalize=True)
 
 
 def janela_musica():
     sg.theme('Reddit')
     layout = [
     [sg.Text('Digite o Link da música:', size=(24, 0)), sg.Input(key='music', size=(45, 0))], 
-    [sg.Text('Selecione a pasta:', size=(24, 0)), sg.InputText('', size= (35, 0),key = 'path'), sg.FolderBrowse('Arquivo', button_color=('#555555','#e7e7e7'),font=("CooperBlack", 12),size = (7,0)),],
-    [sg.Text(size=(24, 1)), sg.Button('Baixar', font=("CooperBlack", 12), size=(20,1),button_color=('#555555','#e7e7e7'))]
+    [sg.Text('Selecione a pasta:', size=(24, 0)), sg.InputText('', size= (35, 0),key = 'path'), sg.FolderBrowse('Arquivo', button_color=('#000000','#48D1CC'),font=("Bodoni ", 12),size = (7,0)),],
+    [sg.Text(size=(24, 1)), sg.Button('Baixar', font=("Bodoni ", 12), size=(20,1),button_color=('#000000','#48D1CC'))]
     ]
-    return sg.Window('Dowloader Music',layout=layout,font=("CooperBlack", 10), finalize=True)
+    return sg.Window('Dowloader Music',layout=layout,font=("Bodoni ", 10), finalize=True)
 
 
 def janela_playlist():
     sg.theme('Reddit')
     layout = [
     [sg.Text('Digite o Link da Playlist:', size=(24, 0)), sg.Input(key = 'playlist', size=(45, 0))],
-    [sg.Text('Selecione a pasta:', size=(24, 0)), sg.InputText('', size=(35, 0), key = 'path'), sg.FolderBrowse('Arquivo', button_color=('#555555','#e7e7e7'),font=("CooperBlack", 12),size = (7,0)),],
-    [sg.Text( size=(24,1)),sg.Button('Baixar',font=("CooperBlack", 12), size=(20,1),button_color=('#555555','#e7e7e7'))]
+    [sg.Text('Selecione a pasta:', size=(24, 0)), sg.InputText('', size=(35, 0), key = 'path'), sg.FolderBrowse('Arquivo', button_color=('#000000','#48D1CC'),font=("Bodoni ", 12),size = (7,0)),],
+    [sg.Text( size=(24,1)),sg.Button('Baixar',font=("Bodoni ", 12), size=(20,1),button_color=('#000000','#48D1CC'))]
     ]
-    return sg.Window('Dowloader Playlist',layout=layout,font=("Courier New", 10), finalize=True)
+    return sg.Window('Dowloader Playlist',layout=layout,font=("Bodoni", 10), finalize=True)
 
 
 #Criar as janelas
