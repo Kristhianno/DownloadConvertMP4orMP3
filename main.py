@@ -1,4 +1,3 @@
-from tkinter import CENTER
 from PySimpleGUI import PySimpleGUI as sg
 from pytube import YouTube
 from pytube import Playlist
@@ -60,7 +59,7 @@ def janela_inicio():
         [sg.Button('Música', size=(30, 3), button_color=('#000000', '#48D1CC'))],
         [sg.Button('Playlist', size=(30, 3), button_color=('#000000', '#48D1CC'))]
     ]
-    return sg.Window('Download Youtube', layout=layout, font=("Bodoni ", 13), finalize=True, size=(280, 250), element_justification=CENTER)
+    return sg.Window('Download Youtube', layout=layout, font=("Bodoni ", 13), finalize=True, size=(280, 250))
 
 
 def janela_video():
